@@ -32,7 +32,7 @@
         android:layout_height="67dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="NATURE OF COMPLAINT*"
+        android:text="NATURE OF COMPLAINT"
         android:visibility="visible"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="163dp" />
@@ -58,21 +58,6 @@
         android:visibility="visible"
         tools:layout_editor_absoluteX="18dp"
         tools:layout_editor_absoluteY="327dp" />
-
-    <android.support.design.widget.TextInputLayout
-        android:layout_width="248dp"
-        android:layout_height="53dp"
-        android:textColorHint="Pediatrician "
-        tools:layout_editor_absoluteX="155dp"
-        tools:layout_editor_absoluteY="94dp">
-
-        <android.support.design.widget.TextInputEditText
-            android:id="@+id/speciality_input"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="e.g.  pediatrician"
-            android:visibility="visible" />
-    </android.support.design.widget.TextInputLayout>
 
     <android.support.design.widget.TextInputLayout
         android:layout_width="158dp"
@@ -134,6 +119,18 @@
         <android.support.design.widget.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="261dp"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="134dp"
+        tools:layout_editor_absoluteY="91dp">
+
+        <android.support.design.widget.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="e.g. pediatrician" />
     </android.support.design.widget.TextInputLayout>
 
 </android.support.constraint.ConstraintLayout>
