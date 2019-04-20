@@ -8,11 +8,132 @@
 
     <Button
         android:id="@+id/doctor"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="168dp"
+        android:layout_height="58dp"
         android:text="Find Doctors"
         android:visibility="visible"
-        tools:layout_editor_absoluteX="133dp"
-        tools:layout_editor_absoluteY="488dp" />
+        tools:layout_editor_absoluteX="109dp"
+        tools:layout_editor_absoluteY="482dp" />
+
+    <EditText
+        android:id="@+id/speciality"
+        android:layout_width="118dp"
+        android:layout_height="55dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="SPECIALITY*"
+        android:visibility="visible"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="92dp" />
+
+    <EditText
+        android:id="@+id/complaint"
+        android:layout_width="220dp"
+        android:layout_height="67dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="NATURE OF COMPLAINT*"
+        android:visibility="visible"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="163dp" />
+
+    <EditText
+        android:id="@+id/user_location"
+        android:layout_width="193dp"
+        android:layout_height="49dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="PATIENT'S ZIP CODE*"
+        android:visibility="visible"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="257dp" />
+
+    <EditText
+        android:id="@+id/insurance"
+        android:layout_width="166dp"
+        android:layout_height="41dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text=" INSURANCE UID*"
+        android:visibility="visible"
+        tools:layout_editor_absoluteX="18dp"
+        tools:layout_editor_absoluteY="327dp" />
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="248dp"
+        android:layout_height="53dp"
+        android:textColorHint="Pediatrician "
+        tools:layout_editor_absoluteX="155dp"
+        tools:layout_editor_absoluteY="94dp">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/speciality_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="e.g.  pediatrician"
+            android:visibility="visible" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="158dp"
+        android:layout_height="72dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="168dp">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/complaint_input"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="e.g. toothache"
+            android:visibility="visible" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="186dp"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="217dp"
+        tools:layout_editor_absoluteY="250dp">
+
+        <android.support.design.widget.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="e.g. 61820" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="214dp"
+        android:layout_height="61dp"
+        tools:layout_editor_absoluteX="189dp"
+        tools:layout_editor_absoluteY="309dp">
+
+        <android.support.design.widget.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="e.g. aetna-aetnabasichmo" />
+    </android.support.design.widget.TextInputLayout>
+
+    <EditText
+        android:id="@+id/gender"
+        android:layout_width="174dp"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="DOCTOR'S GENDER"
+        android:visibility="visible"
+        tools:layout_editor_absoluteX="21dp"
+        tools:layout_editor_absoluteY="395dp" />
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="201dp"
+        android:layout_height="52dp"
+        tools:layout_editor_absoluteX="203dp"
+        tools:layout_editor_absoluteY="391dp">
+
+        <android.support.design.widget.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </android.support.design.widget.TextInputLayout>
 
 </android.support.constraint.ConstraintLayout>
