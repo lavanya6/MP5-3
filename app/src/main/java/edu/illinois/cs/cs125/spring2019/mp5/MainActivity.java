@@ -20,6 +20,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.text.InputType;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -29,6 +30,7 @@ import android.widget.Toast;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.Volley;
+import com.example.mp5.R;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonElement;
@@ -46,7 +48,7 @@ import java.util.Locale;
 
 
 
-public class MainActivity {
+public class MainActivity extends AppCompatActivity {
     /** Default logging tag for messages from the main activity. */
     private static final String TAG = "MP5:Main";
 
@@ -67,8 +69,29 @@ public class MainActivity {
     private boolean canWriteToPublicStorage = false;
 
     protected void onCreate(final Bundle savedInstanceState) {
-        requestQueue =
+        requestQueue = Volley.newRequestQueue(this);
+
+        super.onCreate(savedInstanceState);
+
+        setContentView(R.layout.activity_main);
+
+        final Button findDoctor = findViewById(R.id.doctor);
+        //findDoctor.setOnClickListener(v -> {
+            //Log.d(TAG, "Find button click");
+            //startFindDoctor();
+        //}
+        //);
 
     }
 
+    protected void startFindDoctor(final String jsonResult) {
+
+        //TextView textView =
+
+
+    }
+
+
+
 }
+
