@@ -67,7 +67,7 @@
     <EditText
         android:id="@+id/insurance"
         android:layout_width="166dp"
-        android:layout_height="41dp"
+        android:layout_height="59dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
@@ -129,8 +129,8 @@
 
     <EditText
         android:id="@+id/gender"
-        android:layout_width="174dp"
-        android:layout_height="48dp"
+        android:layout_width="165dp"
+        android:layout_height="56dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"

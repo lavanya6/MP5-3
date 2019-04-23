@@ -15,7 +15,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
-import com.example.mp5.R;
+import edu.illinois.cs.cs125.spring2019.mp5.R;
 import com.google.gson.JsonObject;
 
 
@@ -26,12 +26,12 @@ public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MP5:Main";
 
     /** Request queue for our network requests. */
-    //private static RequestQueue requestQueue;
+    private static RequestQueue requestQueue;
 
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        //requestQueue = Volley.newRequestQueue(this);
+        requestQueue = Volley.newRequestQueue(this);
 
         setContentView(R.layout.activity_main);
         final TextView hi = findViewById(R.id.textView);
