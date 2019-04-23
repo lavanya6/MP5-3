@@ -135,4 +135,12 @@
             android:visibility="visible" />
     </android.support.design.widget.TextInputLayout>
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="167dp"
+        android:layout_height="66dp"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="117dp"
+        tools:layout_editor_absoluteY="611dp" />
+
 </android.support.constraint.ConstraintLayout>
