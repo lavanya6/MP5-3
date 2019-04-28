@@ -33,6 +33,7 @@ import android.content.Context;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.json.JSONArray;
+import com.google.gson.JsonObject;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -44,6 +45,8 @@ public class MainActivity extends AppCompatActivity {
     private static RequestQueue requestQueue;
     TextView hi;
     EditText specialty;
+    EditText complain;
+    EditText insure;
 
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,6 +57,8 @@ public class MainActivity extends AppCompatActivity {
         hi = findViewById(R.id.textView);
         hi.setVisibility(View.GONE);
         specialty = findViewById(R.id.speciality);
+        complain = findViewById(R.id.complaint);
+        insure = findViewById(R.id.insurance);
         final Button findDoctor = findViewById(R.id.doctor);
         findDoctor.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -68,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
         try {
             JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(
                     Request.Method.GET,
-                    "https://api.betterdoctor.com/2016-03-01/doctors?location=37.773%2C-122.413%2C100&user_location=37.773%2C-122.413&skip=0&limit=10&user_key=a07ecd33371acf7d00101371eaff5e2a",
+                    "https://api.betterdoctor.com/2016-03-01/doctors?specialty_uid=dentist&location=40.116421%2C%20-88.243385%2C%2010&user_location=40.116421%2C%20-88.243385&skip=0&limit=10&user_key=a07ecd33371acf7d00101371eaff5e2a",
                     null,
                     new Response.Listener<JSONObject>() {
                         @Override
