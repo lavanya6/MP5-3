@@ -105,7 +105,7 @@ public class MainActivity extends AppCompatActivity {
         try {
             Log.d(TAG, response.toString(2));
             // Example of how to pull a field off the returned JSON object
-            Log.i(TAG, response.get("profile").toString());
+            Log.i(TAG, response.get("data").toString());
             hi.setText(response.get("data").toString());
         } catch (JSONException ignored) { }
     }
