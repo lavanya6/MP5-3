@@ -31,7 +31,7 @@
         android:layout_marginTop="8dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="SPECIALITY*"
+        android:text="Speciality"
         android:visibility="visible"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -50,7 +50,8 @@
             android:id="@+id/speciality_id"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="e.g. pediatrician"
+            android:autoText="false"
+            android:hint="e.g. dentist"
             android:visibility="visible" />
     </android.support.design.widget.TextInputLayout>
 

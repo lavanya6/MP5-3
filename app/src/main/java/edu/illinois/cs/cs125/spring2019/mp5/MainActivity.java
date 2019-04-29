@@ -50,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
     private String result;
     private static final String TAG = "MP5:Main";
 
+
     /** Request queue for our network requests. */
     private static RequestQueue requestQueue;
     TextView hi;
@@ -64,8 +65,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         hi = findViewById(R.id.textView);
         hi.setVisibility(View.GONE);
-        specialty = (EditText) findViewById(R.id.speciality);
+        specialty = (EditText) findViewById(R.id.speciality_id);
         sp = specialty.getText().toString().toLowerCase();
+        Log.d(TAG, "test");
+        Log.i(TAG, sp);
         final Button findDoctor = findViewById(R.id.doctor);
         findDoctor.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -79,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
         try {
             JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(
                     Request.Method.GET,
-                    "https://api.betterdoctor.com/2016-03-01/doctors?specialty_uid=dentist&location=40.116421%2C-88.243385%2C10&user_location=40.116421%2C-88.243385&skip=0&limit=10&user_key=a07ecd33371acf7d00101371eaff5e2a",
+                    "https://api.betterdoctor.com/2016-03-01/doctors?specialty_uid=pediatrician&location=40.116421%2C%20-88.243385%2C%2010&user_location=40.116421%2C%20-88.243385&skip=0&limit=10&user_key=a07ecd33371acf7d00101371eaff5e2a",
                     null,
                     new Response.Listener<JSONObject>() {
                         @Override
@@ -229,22 +232,19 @@ public class MainActivity extends AppCompatActivity {
             JSONArray decDoctorP = decDoctorUn.getJSONArray("phones");
             JSONObject decDoctorPhone = decDoctorP.getJSONObject(0);
             String decDoctorNumber = decDoctorPhone.get("number").toString();
-
-
+            Log.d(TAG, sDoctorNameString);
             hi.setText("Results" + "\n" + "\n" + "1. " + fDoctorNameString + "\n" + fDoctorOfficeAddress + "\n" + fDoctorNumber
-                        + "\n" + "\n" + "2. " + sDoctorNameString + "\n" + sDoctorOfficeAddress + "\n" + sDoctorNumber
-                        + "\n" + "\n" + "3. " + tDoctorNameString + "\n" + tDoctorOfficeAddress + "\n" + tDoctorNumber
-                        + "\n" + "\n" + "4. " + bDoctorNameString + "\n" + bDoctorOfficeAddress + "\n" + bDoctorNumber
-                        + "\n" + "\n" + "5. " + pentDoctorNameString + "\n" + pentDoctorOfficeAddress + "\n" + pentDoctorNumber
-                        + "\n" + "\n" + "6. " + hexDoctorNameString + "\n" + hexDoctorOfficeAddress + "\n" + hexDoctorNumber
-                        + "\n" + "\n" + "7. " + heptDoctorNameString + "\n" + heptDoctorOfficeAddress + "\n" + heptDoctorNumber
-                        + "\n" + "\n" + "8. " + octDoctorNameString + "\n" + octDoctorOfficeAddress + "\n" + octDoctorNumber
-                        + "\n" + "\n" + "9. " + nonDoctorNameString + "\n" + nonDoctorOfficeAddress + "\n" + nonDoctorNumber
-                        + "\n" + "\n" + "10. " + decDoctorNameString + "\n" + decDoctorOfficeAddress + "\n" + decDoctorNumber);
+                    + "\n" + "\n" + "2. " + sDoctorNameString + "\n" + sDoctorOfficeAddress + "\n" + sDoctorNumber
+                    + "\n" + "\n" + "3. " + tDoctorNameString + "\n" + tDoctorOfficeAddress + "\n" + tDoctorNumber
+                    + "\n" + "\n" + "4. " + bDoctorNameString + "\n" + bDoctorOfficeAddress + "\n" + bDoctorNumber
+                    + "\n" + "\n" + "5. " + pentDoctorNameString + "\n" + pentDoctorOfficeAddress + "\n" + pentDoctorNumber
+                    + "\n" + "\n" + "6. " + hexDoctorNameString + "\n" + hexDoctorOfficeAddress + "\n" + hexDoctorNumber
+                    + "\n" + "\n" + "7. " + heptDoctorNameString + "\n" + heptDoctorOfficeAddress + "\n" + heptDoctorNumber
+                    + "\n" + "\n" + "8. " + octDoctorNameString + "\n" + octDoctorOfficeAddress + "\n" + octDoctorNumber
+                    + "\n" + "\n" + "9. " + nonDoctorNameString + "\n" + nonDoctorOfficeAddress + "\n" + nonDoctorNumber
+                    + "\n" + "\n" + "10. " + decDoctorNameString + "\n" + decDoctorOfficeAddress + "\n" + decDoctorNumber);
             hi.setTextSize(18);
             hi.setMovementMethod(new ScrollingMovementMethod());
-            Log.d(TAG, sDoctorNameString);
-
         } catch (JSONException ignored) { }
     }
 }
